@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Запустить скан
+{% endblock %}
+
+{% block content %}
+<h1>Создать скан</h1>
+<form method="post">
+    {% csrf_token %}
+    <!-- {{ form.status }}<br> -->
+    {{ form.domains }}<br>
+    <button type="submit" class="btn btn-success">Запустить</button>
+    <span>{{ error }}</span>
+</form>
+{% endblock %}
